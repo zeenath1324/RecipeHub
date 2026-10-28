@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-forest: #234B38;
+  --color-deep-forest: #142A20;
+  --color-cream: #F8F5ED;
+  --color-cream-light: #FBF9F4;
+  --color-sage: #A7B8A0;
+  --color-terracotta: #C87852;
+  --color-charcoal: #252922;
+  --color-muted: #777A70;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Print styles for Recipe Details */
+@media print {
+  header, nav, footer, .no-print, button:not(.print-keep) {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  .print-area {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+}

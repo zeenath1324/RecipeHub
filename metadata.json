@@ -1,0 +1,8 @@
+{
+  "name": "RecipeHub",
+  "description": "Discover, cook, and share exceptional recipes on a cinematic culinary platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
